@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+ bool ispalindrome(int n){
+     int rev=0;
+     int temp=n;
+     while(n>0){
+         int digit= n%10;
+         rev=rev*10+digit;
+         n=n/10;
+     }
+     // if n is equal to rev then print.
+     if(temp==rev){
+         return true;
+     }
+     return false;
+ }
+int main(){
+    int min;
+    cout<<"Enter the minimum number"<<endl;
+    cin>>min;
+    int max;
+    cout<<"Enter the maximum number"<<endl;
+    cin>>max;
+    for(int i=min;i<=max;i++){
+        if(ispalindrome(i)){
+            cout<<i<<" ";
+        }
+}
+}
+   
